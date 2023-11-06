@@ -16,10 +16,12 @@ function onInput(e) {
 }
 function onSubmit(e) {
   e.preventDefault();
-  formState = {};
   localStorage.removeItem(STORAGE_KEY);
   e.target.reset();
+  
+  console.log(formState);
 }
+
 function onLoad() {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
